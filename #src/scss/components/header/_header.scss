@@ -1,5 +1,10 @@
 .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     background-color: #f8f8f8;
+    z-index: 10;
     &__container {
         display: flex;
         align-items: center;
@@ -9,10 +14,6 @@
     &__logo {
         margin-right: 123px;
     }
-
-    &__nav {
-    }
-
     &__phone {
         margin-left: auto;
     }
@@ -39,10 +40,11 @@
         color: var(--color-primary);
         padding-bottom: 7px;
         border-bottom: 2px solid transparent;
-        &.active {
-            color: var(--color-any);
-            border-color: var(--helper-color-light);
-        }
+        // &.active {
+        //     color: var(--color-any);
+        //     border-color: var(--helper-color-light);
+        //     font-weight: 700;
+        // }
         &:hover {
             color: var(--color-any);
             border-color: var(--helper-color-light);
@@ -60,4 +62,8 @@
         color: var(--color-any);
         font-weight: 700;
     }
+}
+
+.burger {
+    @include burger;
 }

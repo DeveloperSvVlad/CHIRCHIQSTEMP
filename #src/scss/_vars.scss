@@ -4,12 +4,15 @@
     --color-secondary: #565656;
     --color-light: #ffffff;
     --color-any: #0047ff;
+    --color-silver: rgba(0, 0, 0, 0.5);
     --bg-main-color: #e4e4e4;
 
 
     //? Helper color 
     --helper-color-primary: #00be6e;
     --helper-color-light: #0047ff;
+    --helper-color-secondary: #ffffff;
+    --helper-color-danger: #eb0000;
 
     //? FontFamily 
     --font-primary: 'Montserrat', sans-serif;
@@ -21,6 +24,7 @@
     
     //? Size font
     --size-primary: 18px;
+    --size-secondary: 20px;
     //? Any components
     --transition: all .3s ease;
 }
