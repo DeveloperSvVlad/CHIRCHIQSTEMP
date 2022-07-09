@@ -1,0 +1,137 @@
+/* Global Style main */
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container{
+    width: 100%;
+    max-width: 1310px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.indentation {
+    padding: 40px 0px;
+}
+.head {
+    &--line {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 15px;
+    }
+}
+.line-th {
+    text-decoration: line-through;
+}
+.decoration {
+    text-decoration: underline;
+}
+.logo {
+    display: block;
+    &__wrap {
+        display: block;
+        width: 340px;
+        height: 80px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+img {
+    max-width: 100%;
+}
+.body-lock {
+    overflow: hidden;
+}
+//! Components big
+.title {
+    font-weight: var(--title-weight-primary);
+    color: var(--title-color-primary);
+    font-size: 42px;
+    line-height: 120%;
+}
+.ind-small {
+    margin-bottom: 60px;
+}
+.mb-desc {
+    margin-bottom: 40px;
+    @media(max-width: $breakpoints-3) {
+        margin-bottom: 30px;
+    }
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 291px;
+    text-align: center;
+    padding: 18px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+    border-radius: 10px;
+    will-change: transform;
+}
+.btn--primary {
+    background-color: #000000;
+    color: #ffffff;
+    &:hover {
+        background-color: #020202;
+    }
+    &:active {
+        transform: scale(0.99);
+    }
+}
+.btn--secondary {
+    background-color: #ffffff;
+    color: #000000;
+    // &:hover {
+    //     background-color: #d8d5d5;
+    // }
+    &:active {
+        transform: scale(0.99);
+    }
+}
+.head {
+    margin-bottom: 40px;
+    @media(max-width: $breakpoints-3) {
+        margin-bottom: 30px;
+       
+    }
+    &--ind-mobile {
+        @media(max-width: $breakpoints-3) {
+            & > *:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+//! Components big end
+
+//! Components small 
+.hidden {
+    overflow: hidden;
+}
+.error {
+    border: 2px #ff4019 solid !important;
+}
+.btn-reset {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+//! Components small end 

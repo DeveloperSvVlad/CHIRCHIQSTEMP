@@ -1,0 +1,24 @@
+.grid-primary {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    &__item {
+        padding: 0 10px;
+        flex: 0 1 25%;
+        margin-bottom: 40px;
+    }
+}
+
+.grid-half {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 45px;
+}
+
+.grid-second {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 45px;
+}

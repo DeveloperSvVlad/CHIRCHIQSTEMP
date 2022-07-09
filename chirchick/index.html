@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="robots" content="">
+<link rel="short icon" href="">
+<link rel="stylesheet" href="libs/swiper.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+
+  <title>Главная</title>
+</head>
+<body>
+  <div class="wrapper">
+  <!-- ?Подключение Header -->
+  <header class="header js-head">
+    <div class="header__container container">
+        <div class="header__logo logo" style="font-size: 18px; font-weight: 700;">
+             CHIRCHIQ STEMP
+       </div>
+       <div class="header__nav nav">
+        <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item"><a class="nav__list-link active" href="#">Главная</a></li>
+              <li class="nav__list-item"><a class="nav__list-link" href="#">О нас</a></li>
+              <li class="nav__list-item"><a class="nav__list-link" href="#">Продукция</a></li>
+              <li class="nav__list-item"><a class="nav__list-link" href="#">Топливо</a></li>
+              <li class="nav__list-item"><a class="nav__list-link" href="#">Контакты</a></li>
+            </ul>
+        </nav>        
+       </div>
+       <div class="header__phone">
+          <a href="tel:+998917809696" class="phone-link"><span>+998(91)</span> 780-96-96</a>
+       </div>
+    </div>
+</header>
+
+<!--? Location popup -->
+<!-- <div class="popup js-popup-location choice-location">
+    <div class="popup__wrapper">
+        <div class="popup__inner">
+          <div class="popup__content">
+            <button class="popup__btn-close"><span class="i-close"></span></button>
+          </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+  <!-- ?Основной контент -->
+  <main class="main">
+    <div class="container">
+      <h1 class="title">О нас</h1>
+      <button class="btn btn--primary">Узнать больше</button>
+      <button class="btn btn--secondary">Перейти в каталог</button>
+    </div>
+  
+  </main>
+  <!-- ?Подключение Footer -->
+  <footer class="footer">
+    <div class="container">
+            
+    </div>
+</footer>
+
+
+  
+  </div>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=b6a870ec-d914-424a-a003-b2d702a5d3db&amp;lang=ru_RU" type="text/javascript"></script> -->
+<script src="libs/swiper.min.js"></script>
+<script src="js/main.js"></script>
+<!-- <script>
+    var myMap;
+    ymaps.ready(init);
+    function init() {
+        myMap = new ymaps.Map('map', {
+            center: [41.28496400103806, 69.25303541677091], 
+            zoom: 17, 
+          }, 
+          {
+            searchControlProvider: 'yandex#search'
+          });
+         
+          
+           myCollectionPin = new ymaps.GeoObjectCollection({}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/metka.png',
+              iconImageSize: [70, 85],
+          });
+           var arrMainShop = [
+             {
+              coords: [41.28496400103806, 69.25303541677091],
+              hintContent: '123',
+              ballonContentText: '123'
+             },
+          ]
+          arrMainShop.forEach(el => {
+            var mark = new ymaps.Placemark(el.coords, {
+              hintContent: el.hintContent,
+              balloonContent: `<span class="text">${el.ballonContentText}</span>`,
+            });
+            myCollectionPin.add(mark)
+          });
+          myMap.geoObjects.add(myCollectionPin);  
+          //заглушка для карты
+          myMap.behaviors.disable('scrollZoom');
+          var ctrlKey = false;
+          var ctrlMessVisible = false;
+          var timer;
+          // Отслеживаем скролл мыши на карте, чтобы показывать уведомление
+          myMap.events.add(['wheel', 'mousedown'], function(e) {
+          if (e.get('type') == 'wheel') {
+            if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
+              ctrlMessVisible = true;
+              clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
+              timer = setTimeout(function() {
+                ctrlMessVisible = false;
+              }, 1500);
+            }
+          }
+          if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
+          }
+        });
+  
+        // Обрабатываем нажатие на Ctrl
+        $(document).keydown(function(e) {
+          if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
+            ctrlKey = true;
+            myMap.behaviors.enable('scrollZoom');
+          }
+        });
+        $(document).keyup(function(e) { // Ctrl не нажат: выключаем масштабирование мышью
+          if (e.which === 17) {
+            ctrlKey = false;
+            myMap.behaviors.disable('scrollZoom');
+          }
+        });
+      }
+</script>  -->
+</body>
+</html>
