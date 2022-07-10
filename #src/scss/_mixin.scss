@@ -27,7 +27,7 @@ $maxWidthContainer: 1280;
 }
 
 @mixin burger {
-  @media (max-width: $breakpoints-2) {
+  @media (max-width: $breakpoints-1) {
        display: block;
        position: relative;
        width: 38px;

@@ -1,7 +1,7 @@
 .catalog {
 
     &__wrapper {
-        margin-bottom: 130px;
+        @include adaptiv-value('margin-bottom', 130, 80, 1);
     }
 
 }

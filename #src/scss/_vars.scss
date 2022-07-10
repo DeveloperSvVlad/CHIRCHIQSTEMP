@@ -1,3 +1,9 @@
+//? width query
+$breakpoints-1: 1200px;
+$breakpoints-2: 992px;
+$breakpoints-3: 767px;
+$breakpoints-4: 575px;
+
 :root {
     //? Colors
     --color-primary: #292929;
@@ -25,12 +31,11 @@
     //? Size font
     --size-primary: 18px;
     --size-secondary: 20px;
+    @media(max-width: $breakpoints-3) {
+        --size-primary: 16px;
+        --size-secondary: 18px;
+    }
     //? Any components
     --transition: all .3s ease;
 }
 
-//? width query
-$breakpoints-1: 1360px;
-$breakpoints-2: 992px;
-$breakpoints-3: 767px;
-$breakpoints-4: 575px;

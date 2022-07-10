@@ -1,10 +1,72 @@
+
+.swiper-slide {
+    height: auto;
+}
+
+.slider-main {
+    &__prev {
+        margin-right: 30px;
+    }
+    &__prev, &__next {
+        position: static;
+        margin-top: 0;
+        
+    }
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+
+.slider-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: var(--transition);
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    svg {
+        transition: var(--transition);
+        fill: #000000;
+    }
+    &:hover {
+        svg {
+            fill: #ffffff;
+        }
+        background-color: var(--helper-color-light);
+    }
+    &:after {
+        font-size: 0;
+        display: none;
+    }
+}
+
 .nav-catalog {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
+    gap: 30px 0px;
+    @media(max-width: $breakpoints-2) {
+        margin: 0 -10px;
+    }
     &__item {
         padding: 0 20px;
         flex: 0 1 25%;
+        @media(max-width: $breakpoints-1) {
+            flex: 0 1 33.3%;
+        }
+        @media(max-width: $breakpoints-2) {
+            flex: 0 1 50%;
+            padding: 0 10px;
+        }
+        @media(max-width: $breakpoints-4) {
+            flex: 0 1 100%;
+        }
         &.active {
             .nav-catalog__body {
                 border-bottom: 3px solid #000000;
@@ -17,7 +79,7 @@
         justify-content: center;
         text-align: center;
         padding: 23px;
-        font-size: 19px;
+        font-size: var(--size-primary);
         font-weight: 700;
         text-transform: uppercase;
         min-height: 145px;
@@ -25,6 +87,10 @@
         color: var(--color-secondary);
         transition: var(--transition);
         border-bottom: 3px solid transparent;
+        @media(max-width: $breakpoints-2) {
+            padding: 20px;
+            min-height: 120px;
+        }
         &:hover {
             border-color: #000000;
         }
