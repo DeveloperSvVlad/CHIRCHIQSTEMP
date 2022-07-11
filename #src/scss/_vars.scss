@@ -31,6 +31,7 @@ $breakpoints-4: 575px;
     //? Size font
     --size-primary: 18px;
     --size-secondary: 20px;
+    --size-small: 14px;
     @media(max-width: $breakpoints-3) {
         --size-primary: 16px;
         --size-secondary: 18px;

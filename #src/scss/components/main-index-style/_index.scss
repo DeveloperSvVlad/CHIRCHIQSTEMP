@@ -55,6 +55,7 @@
         padding: 60px 110px;
         background-color: var(--helper-color-secondary);
         border-radius: 15px;
+        position: relative;
         @media(max-width: $breakpoints-1) {
             padding: 60px;
         }

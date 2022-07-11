@@ -124,7 +124,7 @@
     }
 
     &__subtitle {
-        font-size: 14px;
+        font-size: var(--size-small);
         font-weight: 500;
         color: var(--color-silver);
         line-height: 125%;
@@ -140,7 +140,7 @@
         color: #000000;
         line-height: 125%;
         @media(max-width: $breakpoints-4) {
-            font-size: 14px;
+            font-size: var(--size-small);
         }
     }
 
@@ -155,7 +155,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 14px;
+        font-size: var(--size-small);
         margin: 0 -5px;
         color: var(--color-silver);
         line-height: 120%;
@@ -199,7 +199,7 @@
     }
     &__current {
         font-weight: 800;
-        font-size: 14px;
+        font-size: var(--size-small);
         color: #000000;
         line-height: 120%;
     }

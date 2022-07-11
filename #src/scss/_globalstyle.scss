@@ -29,15 +29,8 @@
 }
 .logo {
     display: block;
-    color: var(--color-any);
-    text-transform: uppercase;
-    font-size: var(--size-primary); 
-    font-weight: 700;
     position: relative;
     z-index: 2;
-    span {
-        color: #dc0000;
-    }
     img {
         max-width: 100%;
     }
@@ -107,10 +100,10 @@ img {
     }
 }
 .btn--primary {
-    background-color: #000000;
+    background-color: #0040E3;
     color: #ffffff;
     &:hover {
-        background-color: #272121;
+        background-color: #0d3aad;
     }
     &:active {
         transform: scale(0.99);
@@ -120,7 +113,8 @@ img {
     background-color: #ffffff;
     color: #000000;
     &:hover {
-        background-color: #d8d5d5;
+        background-color: #d60000;
+        color: #ffffff;
     }
     &:active {
         transform: scale(0.99);

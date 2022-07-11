@@ -10,6 +10,7 @@ if (sliderMain) {
             slidesPerView: 1.2,
             slidesPerColumn: 2,
             spaceBetween: 20,
+            grabCursor: true,
             navigation: {
                 nextEl: el.querySelector('.slider-main__next'),
                 prevEl: el.querySelector('.slider-main__prev'),
@@ -34,6 +35,22 @@ if (sliderMain) {
         })
     })
 }
+var swiper = new Swiper(".slider-produce__thumb", {
+    slidesPerView: 3,
+    direction: "vertical",
+    spaceBetween: 16,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+  var swiper2 = new Swiper(".slider-produce__main", {
+    spaceBetween: 20,
+    thumbs: {
+      swiper: swiper,
+    },
+  });
 // // Mega menu 
 var bodyGlobal = document.querySelector('body');
 //? Burger Menu and Link ------------------------------------------------>>>>>>
@@ -60,3 +77,49 @@ if (document.querySelectorAll('.burger').length > 0) {
         }
   });
 }
+const tabsBtn = document.querySelectorAll('.js-tabs-btn');
+const tabsItem = document.querySelectorAll('.js-tabs-content');
+if (tabsBtn) {
+    const onTabClick = (item) => {
+        item.addEventListener('click', () => {
+            let curentBtn = item;
+            let tabId = curentBtn.getAttribute('data-tab');
+            let currentTab = document.querySelector(tabId);
+            
+            if (!curentBtn.classList.contains('active')){
+                tabsBtn.forEach((item) => {
+                    
+                    item.classList.remove('active');
+                })
+                tabsItem.forEach((item) => {
+                    item.classList.remove('active');
+                })
+        
+                curentBtn.classList.add('active');
+                currentTab.classList.add('active');
+            }
+           
+        })
+    }
+    
+    tabsBtn.forEach(onTabClick);
+    document.querySelector('.js-tabs-btn').click();
+    
+}
+
+// Value change price 
+const btn = document.querySelectorAll('.js-total-change');
+let total = document.querySelector('.js-total-price');
+btn.forEach(el => {
+    el.addEventListener('click', (event) => {
+        btn.forEach(item => item.classList.remove('active'))
+        if (!el.classList.contains('active')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+        event.preventDefault();
+        const test = el.getAttribute('data-value');
+        total.innerHTML = test + 'сум';
+    })
+})
