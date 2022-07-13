@@ -25,9 +25,8 @@
                 <ul class="nav__list">
                     <li class="nav__list-item"><a class="nav__list-link active" href="index.html">Главная</a></li>
                     <li class="nav__list-item"><a class="nav__list-link" href="about.html">О нас</a></li>
-                    <li class="nav__list-item"><a class="nav__list-link" href="catalog.html">Продукция</a></li>
-                    <li class="nav__list-item"><a class="nav__list-link" href="#">Топливо</a></li>
-                    <li class="nav__list-item"><a class="nav__list-link" href="#">Контакты</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="catalog-mtb.html">Продукция</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link js-scroll-link" href="#contacts">Контакты</a></li>
                 </ul>     
                 <a href="tel:+998917809696" class="nav__phone phone-link"><span>+998(91)</span> 780-96-96</a>
             </div>
@@ -149,12 +148,12 @@
     <section class="produce-tabs ind-big">
         <div class="container">
             <div class="produce-tabs__row ind-small">
-                <button class="produce-tabs__btn tabs-btn js-tabs-btn" data-tab="#tabs-1">Описание</button>
+                <button class="produce-tabs__btn tabs-btn js-tabs-btn active" data-tab="#tabs-1">Описание</button>
                 <button class="produce-tabs__btn tabs-btn js-tabs-btn" data-tab="#tabs-2">Технические характеристики</button>
                 <button class="produce-tabs__btn tabs-btn js-tabs-btn" data-tab="#tabs-3">Документация</button>
             </div>
             <div class="produce-tabs__wrapper">
-                <div class="produce-tabs__content tabs-content js-tabs-content" id="tabs-1">
+                <div class="produce-tabs__content tabs-content js-tabs-content active" id="tabs-1">
                     <div class="produce-tabs__list list">
                         <div class="list__item">
                             <div class="list__title"> МТБ мощностью от 300 кВт до 2000 кВтМодульные тепловые блоки производят мощностью</div>
@@ -433,7 +432,7 @@
     
   </main>
   <!-- ?Подключение Footer -->
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="container">
          <div class="footer__top">
             <div class="footer__start">
@@ -443,9 +442,7 @@
                 <nav class="footer__nav">
                     <a href="index.html">Главная</a>
                     <a href="about.html">О нас</a>
-                    <a href="catalog.html">Продукция</a>
-                    <a href="#">Топливо</a>
-                    <a href="#">Контакты</a>
+                    <a href="catalog-mtb.html">Продукция</a>
                 </nav>
             </div>
             <button class="footer__arrow icon js-up-arrow">

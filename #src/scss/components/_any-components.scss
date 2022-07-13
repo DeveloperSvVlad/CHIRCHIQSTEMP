@@ -237,6 +237,9 @@
         border: 1px dashed #003EDC;
         border-radius: 14px;
         padding: 45px 62px;
+        @media(max-width: $breakpoints-2) {
+            padding: 30px 15px;
+        }
     }
     &__row {
         display: flex;
@@ -244,6 +247,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 0 -15px;
+        gap: 20px 0px;
     }
    
     &__item {
@@ -253,6 +257,12 @@
         font-weight: 500;
         flex: 0 1 33.3%;
         padding: 0 15px;
+        @media(max-width: $breakpoints-2) {
+            flex: 0 1 50%;
+        }
+        @media(max-width: $breakpoints-3) {
+            flex: 0 1 100%;
+        }
     }
 
     &__icon {

@@ -51,6 +51,13 @@ var swiper = new Swiper(".slider-produce__thumb", {
       swiper: swiper,
     },
   });
+
+const btnUp = document.querySelector('.js-up-arrow');
+
+btnUp.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo(0, 0);
+})
 // // Mega menu 
 var bodyGlobal = document.querySelector('body');
 //? Burger Menu and Link ------------------------------------------------>>>>>>
@@ -101,11 +108,9 @@ if (tabsBtn) {
            
         })
     }
-    
     tabsBtn.forEach(onTabClick);
-    document.querySelector('.js-tabs-btn').click();
-    
 }
+
 
 // Value change price 
 const btn = document.querySelectorAll('.js-total-change');
@@ -122,4 +127,12 @@ btn.forEach(el => {
         const test = el.getAttribute('data-value');
         total.innerHTML = test + 'сум';
     })
+})
+
+// Scroll link
+$('.js-scroll-link').on('click', function (e) {
+    e.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top - 120;
+    $('body,html').animate({scrollTop: top}, 300);
 })
