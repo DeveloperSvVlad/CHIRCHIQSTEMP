@@ -137,7 +137,7 @@
     &__title {
         font-size: 16px;
         font-weight: 700;
-        color: #000000;
+        color: var(--color-black);
         line-height: 125%;
         @media(max-width: $breakpoints-4) {
             font-size: var(--size-small);
@@ -177,7 +177,7 @@
             }
             &:last-child {
                 font-weight: 500;
-                color: #000000;
+                color: var(--color-black);
             }
         }
     }
@@ -187,24 +187,9 @@
 }
 .price {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: center;
-    @media(max-width: $breakpoints-1) {
-        flex-direction: column;
-        align-items: flex-start;
-        & > *:not(:last-child) {
-            margin-bottom: 10px;
-        }
-    }
-    &__current {
-        font-weight: 800;
-        font-size: var(--size-small);
-        color: #000000;
-        line-height: 120%;
-    }
-
-    &__start {
+    &__total {
         color: var(--helper-color-primary);
         font-weight: 800;
         line-height: 120%;

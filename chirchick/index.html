@@ -21,16 +21,16 @@
             <img src="img/logo.svg" width="140" height="21" alt="CHIRCHIQ STEMP">
         </a>
        <nav class="header__nav nav">
-        <div class="nav__wrapper">
-            <ul class="nav__list">
-                <li class="nav__list-item"><a class="nav__list-link active" href="index.html">Главная</a></li>
-                <li class="nav__list-item"><a class="nav__list-link" href="about.html">О нас</a></li>
-                <li class="nav__list-item"><a class="nav__list-link" href="catalog.html">Продукция</a></li>
-                <li class="nav__list-item"><a class="nav__list-link" href="#">Топливо</a></li>
-                <li class="nav__list-item"><a class="nav__list-link" href="#">Контакты</a></li>
-              </ul>     
-            <a href="tel:+998917809696" class="nav__phone phone-link"><span>+998(91)</span> 780-96-96</a>
-        </div>
+            <div class="nav__wrapper">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a class="nav__list-link active" href="index.html">Главная</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="about.html">О нас</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="catalog.html">Продукция</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="#">Топливо</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="#">Контакты</a></li>
+                </ul>     
+                <a href="tel:+998917809696" class="nav__phone phone-link"><span>+998(91)</span> 780-96-96</a>
+            </div>
        </nav>
        <div class="header__phone">
           <a href="tel:+998917809696" class="phone-link"><span>+998(91)</span> 780-96-96</a>
@@ -229,83 +229,136 @@
   <!-- ?Подключение Footer -->
   <footer class="footer">
     <div class="container">
-            
+         <div class="footer__top">
+            <div class="footer__start">
+                <a href="#" class="footer__logo logo">
+                    <img src="img/logo.svg" width="140" height="21" alt="CHIRCHIQ STEMP">
+                </a>
+                <nav class="footer__nav">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="catalog.html">Продукция</a>
+                    <a href="#">Топливо</a>
+                    <a href="#">Контакты</a>
+                </nav>
+            </div>
+            <button class="footer__arrow icon js-up-arrow">
+                <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-1.45241e-07 17.5L6.5 17.5C7.60457 17.5 8.5 16.6046 8.5 15.5L8.5 2" stroke="white" stroke-width="2"/>
+                    <path d="M14.0385 8.07677L8.87812 1.79782C8.83087 1.74043 8.77276 1.69447 8.70765 1.66299C8.64254 1.63151 8.57193 1.61523 8.50049 1.61523C8.42906 1.61523 8.35844 1.63151 8.29334 1.66299C8.22823 1.69447 8.17012 1.74043 8.12287 1.79782L2.96153 8.07677" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </button>
+         </div>
+         <div class="footer__bottom">
+            <div class="footer__info">
+                <div class="footer__item">
+                    <span>Адрес:</span>
+                    <p>г. Чирчик, ул. Кангли 16 А</p>
+                </div>
+                <div class="footer__item">
+                    <span>Контакты:</span>
+                    <div class="footer__item-wrapper">
+                        <a class="link-phone" href="tel:+998917809696">+998(91) 780-96-96</a>
+                        <a class="link-phone" href="tel:+998909477965">+998(90) 947-79-65</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__any">
+                <div class="footer__any-item">
+                    <span>Свяжитесь с нами:</span>
+                    <a target="_blank" rel= noreferrer href="#" class="footer__any-icon icon">
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.06305 11.2041L6.7653 15.9505C7.19131 15.9505 7.37581 15.7431 7.59707 15.4941L9.59436 13.3308L13.733 16.7657C14.492 17.2451 15.0267 16.9926 15.2315 15.9743L17.9481 1.54819L17.9488 1.54734C18.1896 0.275743 17.5431 -0.221504 16.8035 0.0904442L0.835653 7.01876C-0.254123 7.49816 -0.237622 8.18665 0.650399 8.4986L4.73275 9.93764L14.2152 3.21333C14.6615 2.87843 15.0672 3.06373 14.7335 3.39863L7.06305 11.2041Z" fill="white"/>
+                        </svg>    
+                    </a>
+                </div>
+                <div class="footer__any-item">© 2022 Все права защищены</div>
+            </div>
+         </div>
     </div>
 </footer>
 
 
   
   </div>
-  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=b6a870ec-d914-424a-a003-b2d702a5d3db&amp;lang=ru_RU" type="text/javascript"></script> -->
+  <script src="libs/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=b6a870ec-d914-424a-a003-b2d702a5d3db&amp;lang=ru_RU" type="text/javascript"></script>
 <script src="libs/swiper.min.js"></script>
+<script src="libs/fslightbox.js"></script>
 <script src="js/main.js"></script>
-<!-- <script>
-    var myMap;
-    ymaps.ready(init);
-    function init() {
-        myMap = new ymaps.Map('map', {
-            center: [41.28496400103806, 69.25303541677091], 
-            zoom: 17, 
-          }, 
-          {
-            searchControlProvider: 'yandex#search'
-          });
-         
-          
-           myCollectionPin = new ymaps.GeoObjectCollection({}, {
-              iconLayout: 'default#image',
-              iconImageHref: 'img/metka.png',
-              iconImageSize: [70, 85],
-          });
-           var arrMainShop = [
-             {
-              coords: [41.28496400103806, 69.25303541677091],
-              hintContent: '123',
-              ballonContentText: '123'
-             },
-          ]
-          arrMainShop.forEach(el => {
-            var mark = new ymaps.Placemark(el.coords, {
-              hintContent: el.hintContent,
-              balloonContent: `<span class="text">${el.ballonContentText}</span>`,
-            });
-            myCollectionPin.add(mark)
-          });
-          myMap.geoObjects.add(myCollectionPin);  
-          //заглушка для карты
-          myMap.behaviors.disable('scrollZoom');
-          var ctrlKey = false;
-          var ctrlMessVisible = false;
-          var timer;
-          // Отслеживаем скролл мыши на карте, чтобы показывать уведомление
-          myMap.events.add(['wheel', 'mousedown'], function(e) {
-          if (e.get('type') == 'wheel') {
-            if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
-              ctrlMessVisible = true;
-              clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
-              timer = setTimeout(function() {
-                ctrlMessVisible = false;
-              }, 1500);
-            }
-          }
-          if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
-          }
-        });
-  
-        // Обрабатываем нажатие на Ctrl
-        $(document).keydown(function(e) {
-          if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
-            ctrlKey = true;
-            myMap.behaviors.enable('scrollZoom');
-          }
-        });
-        $(document).keyup(function(e) { // Ctrl не нажат: выключаем масштабирование мышью
-          if (e.which === 17) {
-            ctrlKey = false;
-            myMap.behaviors.disable('scrollZoom');
-          }
-        });
+<script>
+  var myMap;
+  ymaps.ready(init);
+
+  function init() {
+    myMap = new ymaps.Map('map', {
+      center: [41.28496400103806, 69.25303541677091],
+      zoom: 17,
+    }, {
+      searchControlProvider: 'yandex#search'
+    });
+
+
+    myCollectionPin = new ymaps.GeoObjectCollection({}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/point.svg',
+      iconImageSize: [70, 85],
+    });
+    var arrMainShop = [{
+      coords: [41.28496400103806, 69.25303541677091],
+      hintContent: '123',
+      ballonContentText: '123'
+    }, ]
+    arrMainShop.forEach(el => {
+      var mark = new ymaps.Placemark(el.coords, {
+        hintContent: el.hintContent,
+        balloonContent: `<span class="text">${el.ballonContentText}</span>`,
+      });
+      myCollectionPin.add(mark)
+    });
+    myMap.geoObjects.add(myCollectionPin);
+    //заглушка для карты
+    myMap.behaviors.disable('scrollZoom');
+
+    var ctrlKey = false;
+    var ctrlMessVisible = false;
+    var timer;
+
+    // Отслеживаем скролл мыши на карте, чтобы показывать уведомление
+    myMap.events.add(['wheel', 'mousedown'], function (e) {
+      if (e.get('type') == 'wheel') {
+        if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
+          $('#ymap_ctrl_display').fadeIn(300);
+          ctrlMessVisible = true;
+          clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
+          timer = setTimeout(function () {
+            $('#ymap_ctrl_display').fadeOut(300);
+            ctrlMessVisible = false;
+          }, 1500);
+        } else { // Ctrl нажат, скрываем сообщение
+          $('#ymap_ctrl_display').fadeOut(100);
+        }
       }
-</script>  -->
+      if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
+        $('#ymap_ctrl_display').fadeOut(100);
+      }
+    });
+
+    // Обрабатываем нажатие на Ctrl
+    $(document).keydown(function (e) {
+      if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
+        ctrlKey = true;
+        myMap.behaviors.enable('scrollZoom');
+      }
+    });
+    $(document).keyup(function (e) { // Ctrl не нажат: выключаем масштабирование мышью
+      if (e.which === 17) {
+        ctrlKey = false;
+        myMap.behaviors.disable('scrollZoom');
+      }
+    });
+  }
+</script>
+
 </body>
 </html>

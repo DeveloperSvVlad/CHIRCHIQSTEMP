@@ -1,71 +1,78 @@
-<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=b6a870ec-d914-424a-a003-b2d702a5d3db&amp;lang=ru_RU" type="text/javascript"></script> -->
+<script src="libs/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=b6a870ec-d914-424a-a003-b2d702a5d3db&amp;lang=ru_RU" type="text/javascript"></script>
 <script src="libs/swiper.min.js"></script>
+<script src="libs/fslightbox.js"></script>
 <script src="js/main.js"></script>
-<!-- <script>
-    var myMap;
-    ymaps.ready(init);
-    function init() {
-        myMap = new ymaps.Map('map', {
-            center: [41.28496400103806, 69.25303541677091], 
-            zoom: 17, 
-          }, 
-          {
-            searchControlProvider: 'yandex#search'
-          });
-         
-          
-           myCollectionPin = new ymaps.GeoObjectCollection({}, {
-              iconLayout: 'default#image',
-              iconImageHref: 'img/metka.png',
-              iconImageSize: [70, 85],
-          });
-           var arrMainShop = [
-             {
-              coords: [41.28496400103806, 69.25303541677091],
-              hintContent: '123',
-              ballonContentText: '123'
-             },
-          ]
-          arrMainShop.forEach(el => {
-            var mark = new ymaps.Placemark(el.coords, {
-              hintContent: el.hintContent,
-              balloonContent: `<span class="text">${el.ballonContentText}</span>`,
-            });
-            myCollectionPin.add(mark)
-          });
-          myMap.geoObjects.add(myCollectionPin);  
-          //заглушка для карты
-          myMap.behaviors.disable('scrollZoom');
-          var ctrlKey = false;
-          var ctrlMessVisible = false;
-          var timer;
-          // Отслеживаем скролл мыши на карте, чтобы показывать уведомление
-          myMap.events.add(['wheel', 'mousedown'], function(e) {
-          if (e.get('type') == 'wheel') {
-            if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
-              ctrlMessVisible = true;
-              clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
-              timer = setTimeout(function() {
-                ctrlMessVisible = false;
-              }, 1500);
-            }
-          }
-          if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
-          }
-        });
-  
-        // Обрабатываем нажатие на Ctrl
-        $(document).keydown(function(e) {
-          if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
-            ctrlKey = true;
-            myMap.behaviors.enable('scrollZoom');
-          }
-        });
-        $(document).keyup(function(e) { // Ctrl не нажат: выключаем масштабирование мышью
-          if (e.which === 17) {
-            ctrlKey = false;
-            myMap.behaviors.disable('scrollZoom');
-          }
-        });
+<script>
+  var myMap;
+  ymaps.ready(init);
+
+  function init() {
+    myMap = new ymaps.Map('map', {
+      center: [41.28496400103806, 69.25303541677091],
+      zoom: 17,
+    }, {
+      searchControlProvider: 'yandex#search'
+    });
+
+
+    myCollectionPin = new ymaps.GeoObjectCollection({}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/point.svg',
+      iconImageSize: [70, 85],
+    });
+    var arrMainShop = [{
+      coords: [41.28496400103806, 69.25303541677091],
+      hintContent: '123',
+      ballonContentText: '123'
+    }, ]
+    arrMainShop.forEach(el => {
+      var mark = new ymaps.Placemark(el.coords, {
+        hintContent: el.hintContent,
+        balloonContent: `<span class="text">${el.ballonContentText}</span>`,
+      });
+      myCollectionPin.add(mark)
+    });
+    myMap.geoObjects.add(myCollectionPin);
+    //заглушка для карты
+    myMap.behaviors.disable('scrollZoom');
+
+    var ctrlKey = false;
+    var ctrlMessVisible = false;
+    var timer;
+
+    // Отслеживаем скролл мыши на карте, чтобы показывать уведомление
+    myMap.events.add(['wheel', 'mousedown'], function (e) {
+      if (e.get('type') == 'wheel') {
+        if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
+          $('#ymap_ctrl_display').fadeIn(300);
+          ctrlMessVisible = true;
+          clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
+          timer = setTimeout(function () {
+            $('#ymap_ctrl_display').fadeOut(300);
+            ctrlMessVisible = false;
+          }, 1500);
+        } else { // Ctrl нажат, скрываем сообщение
+          $('#ymap_ctrl_display').fadeOut(100);
+        }
       }
-</script>  -->
+      if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
+        $('#ymap_ctrl_display').fadeOut(100);
+      }
+    });
+
+    // Обрабатываем нажатие на Ctrl
+    $(document).keydown(function (e) {
+      if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
+        ctrlKey = true;
+        myMap.behaviors.enable('scrollZoom');
+      }
+    });
+    $(document).keyup(function (e) { // Ctrl не нажат: выключаем масштабирование мышью
+      if (e.which === 17) {
+        ctrlKey = false;
+        myMap.behaviors.disable('scrollZoom');
+      }
+    });
+  }
+</script>
