@@ -1145,15 +1145,12 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  min-width: 0px;
 }
 
 .produce__slider {
   margin-right: 60px;
-  width: 53%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  overflow: hidden;
 }
 
 .produce__info {
@@ -1234,11 +1231,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .slider-produce__slide {
   display: block;
   position: relative;
+  height: 100%;
 }
 
 .slider-produce__slide:hover .slider-produce__zoom {
@@ -1273,48 +1274,54 @@ img {
 }
 
 .slider-produce__thumb {
+  position: relative;
+  margin-right: 40px;
+  height: 386px;
   min-width: 110px;
   max-width: 110px;
-  overflow: hidden;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
+.slider-produce__thumb .swiper-button-prev {
+  top: -20px;
+}
+
+.slider-produce__thumb .swiper-button-next {
+  bottom: -40px;
+  top: auto;
+}
+
+.slider-produce__thumb .swiper-button-next,
+.slider-produce__thumb .swiper-button-prev {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slider-produce__thumb .swiper-button-next:after,
+.slider-produce__thumb .swiper-button-prev:after {
+  font-size: 0;
+  display: none;
+}
+
 .slider-produce__thumb .swiper-slide {
-  width: 100%;
-  height: 112px !important;
   background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .slider-produce__thumb .swiper-slide img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.slider-produce__wrapper {
-  position: relative;
-  margin-right: 40px;
-}
-
-.slider-produce__arrows {
-  position: absolute;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: none;
-}
-
 .slider-produce__main {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 465px;
-          flex: 0 1 465px;
-  height: 367px;
+  height: 386px;
+  width: 440px;
 }
 
 .slider-produce__main .swiper-slide {
@@ -1323,34 +1330,16 @@ img {
 }
 
 .slider-produce__main .swiper-slide img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.slider-produce__prev,
-.slider-produce__next {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 3;
-}
-
-.slider-produce__prev:after,
-.slider-produce__next:after {
-  font-size: 0;
-  display: none;
-}
-
-.slider-produce__next {
-  bottom: -30px;
-  top: auto;
-}
-
-.slider-produce__prev {
-  top: -30px;
+.swiper-container {
+  width: 100%;
+  height: 100%;
 }
 
 .produce-tabs__row {
@@ -1574,10 +1563,6 @@ img {
     margin-bottom: calc(80px + 50 * ((100vw - 320px) / 960));
   }
 
-  .slider-produce__main {
-    height: calc(250px + 117 * ((100vw - 320px) / 960));
-  }
-
   .produce-tabs__btn {
     margin-right: calc(50px + 104 * ((100vw - 320px) / 960));
   }
@@ -1792,12 +1777,7 @@ img {
   }
 
   .slider-produce__thumb {
-    min-width: 80px;
-    max-width: 80px;
-  }
-
-  .slider-produce__thumb .swiper-slide {
-    height: 80px !important;
+    margin-right: 20px;
   }
 
   .footer__logo {
@@ -1932,21 +1912,21 @@ img {
     font-size: 14px;
   }
 
-  .slider-produce__thumb {
-    min-width: auto;
-    max-width: 100%;
+  .produce__footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
-  .slider-produce__wrapper {
-    margin-right: 0px;
+  .produce__price {
+    margin-left: 0px;
+  }
+
+  .produce__price-list {
     margin-top: 20px;
-  }
-
-  .slider-produce__main {
-    width: 100%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .produce-tabs__row {
@@ -2106,22 +2086,22 @@ img {
             align-items: baseline;
   }
 
-  .produce__footer {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .slider-produce__thumb .swiper-button-next,
+  .slider-produce__thumb .swiper-button-prev {
+    display: none;
   }
 
-  .produce__price {
-    margin-left: 0px;
+  .slider-produce__thumb {
+    min-width: auto;
+    max-width: 100%;
+    height: 90px;
+    margin-right: 0;
+    margin-top: 30px;
   }
 
-  .produce__price-list {
-    margin-top: 20px;
-  }
-
-  .slider-produce__wrapper {
+  .slider-produce__main {
     width: 100%;
+    height: 300px;
   }
 }
 
