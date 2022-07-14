@@ -37,13 +37,18 @@ if (sliderMain) {
 }
 var swiper = new Swiper(".slider-produce__thumb", {
     slidesPerView: 3,
-    direction: "vertical",
+    direction: "horizontal",
     spaceBetween: 16,
     watchSlidesProgress: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        767: {
+            direction: "vertical",
+        }
+      }
   });
   var swiper2 = new Swiper(".slider-produce__main", {
     spaceBetween: 20,

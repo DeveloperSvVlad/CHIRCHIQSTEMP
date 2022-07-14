@@ -33,7 +33,7 @@ $breakpoints-4: 575px;
     --size-primary: 18px;
     --size-secondary: 20px;
     --size-small: 14px;
-    @media(max-width: $breakpoints-3) {
+    @media(max-width: $breakpoints-2) {
         --size-primary: 16px;
         --size-secondary: 18px;
     }
