@@ -568,7 +568,7 @@ img {
   cursor: pointer;
   font-size: 16px;
   line-height: 100%;
-  padding: 12px 14px;
+  padding: 12px 20px;
 }
 
 .tags__item:hover {
@@ -840,8 +840,9 @@ img {
   background-color: #f8f8f8;
   width: 100%;
   margin-bottom: 22px;
-  padding-bottom: 60.7%;
+  padding-bottom: 58%;
   position: relative;
+  overflow: hidden;
 }
 
 .card__image img {
@@ -934,6 +935,11 @@ img {
   color: var(--helper-color-primary);
   font-weight: 800;
   line-height: 120%;
+}
+
+.content__wrapper .card__body {
+  width: 100%;
+  max-width: 400px;
 }
 
 .grid-primary {

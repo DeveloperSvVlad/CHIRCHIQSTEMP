@@ -99,6 +99,7 @@
         height: 100%;
         background-color: var(--helper-color-secondary);
         padding: 25px 35px;
+        
         @media(max-width: $breakpoints-1) {
             padding: 20px 15px;
         }
@@ -109,8 +110,9 @@
         background-color: #f8f8f8;
         width: 100%;
         margin-bottom: 22px;
-        padding-bottom: 60.7%;
+        padding-bottom: 58%;
         position: relative;
+        overflow: hidden;
         @media(max-width: $breakpoints-3) {
             margin-bottom: 10px;
         }
@@ -208,5 +210,12 @@
         color: var(--helper-color-primary);
         font-weight: 800;
         line-height: 120%;
+    }
+}
+
+.content__wrapper {
+    .card__body {
+        width: 100%;
+        max-width: 400px;
     }
 }
