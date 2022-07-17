@@ -12,6 +12,7 @@ let path = {
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts/",
 		libs: project_folder + "/libs/",
+		pages: project_folder + "/pages/",
 	},
 	src: {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -130,7 +131,6 @@ function fonts() {
 		.pipe(ttf2woff2())
 		.pipe(dest(path.build.fonts));
 };
-
 function libs() {
 	return src(path.src.libs)
 		.pipe(dest(path.build.libs));
@@ -176,10 +176,6 @@ function fontsStyle(params) {
 			}
 		})
 	}
-}
-
-function cb() {
-
 }
 
 function watchFiles(params) {

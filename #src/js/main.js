@@ -133,7 +133,7 @@ btn.forEach(el => {
         }
         event.preventDefault();
         const test = el.getAttribute('data-value');
-        total.innerHTML = test + 'сум';
+        total.innerHTML = test + ' сум';
     })
 })
 
