@@ -177,11 +177,14 @@
 
     &__title {
         font-weight: 700;
-        margin-bottom: 5px;
+        margin-bottom: 16px;
     }
 
     &__content {
         font-weight: 400;
+        span {
+            font-weight: 600;
+        }
         & > *:not(:last-child) {
             margin-bottom: 2px;
         }

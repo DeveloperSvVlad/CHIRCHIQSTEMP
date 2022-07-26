@@ -607,11 +607,15 @@ img {
 
 .list__title {
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 }
 
 .list__content {
   font-weight: 400;
+}
+
+.list__content span {
+  font-weight: 600;
 }
 
 .list__content > *:not(:last-child) {
