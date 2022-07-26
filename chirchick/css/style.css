@@ -234,6 +234,8 @@ img {
 .btn--primary {
   background-color: #0040E3;
   color: #ffffff;
+  -webkit-box-shadow: 0px 22px 36px rgba(0, 64, 227, 0.22);
+          box-shadow: 0px 22px 36px rgba(0, 64, 227, 0.22);
 }
 
 .btn--primary:hover {
@@ -574,6 +576,8 @@ img {
   border: 1px solid #0047FF;
   background-color: var(--helper-color-secondary);
   color: var(--color-any);
+  -webkit-box-shadow: 0px 16px 39px rgba(0, 71, 255, 0.18);
+          box-shadow: 0px 16px 39px rgba(0, 71, 255, 0.18);
 }
 
 .price-produce {
@@ -1023,6 +1027,8 @@ img {
   background-color: var(--helper-color-secondary);
   border-radius: 15px;
   position: relative;
+  -webkit-box-shadow: 0px 48px 70px rgba(0, 53, 189, 0.1);
+          box-shadow: 0px 48px 70px rgba(0, 53, 189, 0.1);
 }
 
 .stat__row {
