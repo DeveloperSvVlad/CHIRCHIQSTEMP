@@ -1,5 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 
 let sliderMain = document.querySelectorAll('.slider-main');
+let sliderTrust = document.querySelector('.trust__slider');
+let sliderWorks = document.querySelector('.works__slider');
+let sliderWorksInner = document.querySelectorAll('.js-work-inner-slider');
 if (sliderMain) {
     sliderMain.forEach((el) => {
         var mySwiper = new Swiper(el, {
@@ -35,7 +40,67 @@ if (sliderMain) {
         })
     })
 }
-var swiper = new Swiper(".slider-produce__thumb .swiper-container", {
+if(sliderTrust) {
+    var mySwiper = new Swiper(sliderTrust, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            767: {
+                slidesPerView: 3,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+}
+
+if (sliderWorks) {
+    var mySwiper = new Swiper(sliderWorks, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+        },
+        navigation: {
+            nextEl: '.js-works-next',
+            prevEl: '.js-works-prev',
+        },
+    })
+}
+
+if (sliderWorksInner) {
+    sliderWorksInner.forEach((el) => {
+        var mySwiper = new Swiper(el, {
+            slidesPerView: 1,
+            grabCursor: true,
+            nested: true,
+            navigation: {
+                nextEl: el.querySelector('.js-work-inner-slider-next'),
+                prevEl: el.querySelector('.js-work-inner-slider-prev'),
+            },
+        })
+    })
+   
+}
+let productsThumb = new Swiper(".slider-produce__thumb .swiper-container", {
     slidesPerView: 3,
     direction: "vertical",
     spaceBetween: 16,
@@ -52,16 +117,15 @@ var swiper = new Swiper(".slider-produce__thumb .swiper-container", {
 			direction: 'vertical', 
 		}
       }
-  });
-  var swiper2 = new Swiper(".slider-produce__main .swiper-container", {
+});
+let productsMain = new Swiper(".slider-produce__main .swiper-container", {
     spaceBetween: 20,
     thumbs: {
-      swiper: swiper,
+      swiper: productsThumb,
     },
-  });
+});
 
 const btnUp = document.querySelector('.js-up-arrow');
-
 btnUp.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo(0, 0);
@@ -136,11 +200,12 @@ btn.forEach(el => {
         total.innerHTML = test + ' сум';
     })
 })
-
 // Scroll link
 $('.js-scroll-link').on('click', function (e) {
     e.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top - 120;
     $('body,html').animate({scrollTop: top}, 300);
+})
+
 })

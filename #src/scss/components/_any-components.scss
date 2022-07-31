@@ -283,6 +283,7 @@
         margin-right: 26px;
     }
 }
+
 .maps {
     position: relative;
     @include adaptiv-value('height', 718, 300, 1);
@@ -292,4 +293,18 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+
+.slider-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .swiper-button-prev {
+        margin-right: 40px;
+    }
+    .slider-arrow {
+        position: static;
+        margin-top: 40px;
+    }
 }

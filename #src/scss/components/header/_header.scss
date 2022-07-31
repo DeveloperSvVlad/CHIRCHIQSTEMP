@@ -30,6 +30,15 @@
         }
        
     }
+    &__phone-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        display: none;
+        @media(max-width: $breakpoints-4) {
+            display: block;
+        }
+    }
     &__nav {
         @media(max-width: $breakpoints-1) {
             display: flex;
@@ -105,13 +114,6 @@
         &:hover {
             color: var(--color-any);
             border-color: var(--helper-color-light);
-        }
-    }
-    &__phone {
-        display: none;
-        @media(max-width: $breakpoints-4) {
-            display: block;
-            margin-top: 30px;
         }
     }
 }

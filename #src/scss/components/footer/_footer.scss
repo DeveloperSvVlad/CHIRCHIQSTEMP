@@ -89,7 +89,6 @@
 
     &__item {
         display: flex;
-        align-items: center;
         font-weight: 500;
         &:not(:last-child) {
             margin-bottom: 30px;
@@ -124,12 +123,24 @@
     &__any-icon {
         background-color: #339dff;
         margin-left: 20px;
+        animation: radial-pulse 2s infinite;
+        border-radius: 50%;
         &:hover {
             background-color: #1777d1;
         }
     }
 }
-
+@keyframes radial-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(51, 157, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(41, 128, 241, 0);
+    }
+  }
+.adress {
+    max-width: 325px;
+}
 .link-phone {
     font-size: var(--size-primary);
     font-weight: 500;
